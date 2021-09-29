@@ -11,25 +11,22 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    //  curSpeed = speed;   
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    // Up and Down for Foward and Back
-    float dy = Input.GetAxis(InputAxes.Vertical) * speed ;
-    transform.Translate(0,0,dy * Time.deltaTime );
+        float dy = Input.GetAxis(InputAxes.Vertical) * speed;
+        float dx = Input.GetAxis(InputAxes.Horizontal) * speed;
 
-    // Left and Right for Rotate 
-    float dx = Input.GetAxis(InputAxes.Horizontal) * speed ;
-    transform.Translate(0, dx , 0 * Time.deltaTime );
+        transform.Translate(dy * Vector3.forward * Time.deltaTime);
+        transform.Translate(dx * Vector3.right * Time.deltaTime);
+
     }
+
 }
 
-
-   
-    
 
 
 

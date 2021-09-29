@@ -17,12 +17,16 @@ public class Coin : MonoBehaviour
         
     }
 
-     void OnTriggerEnter(Collider col)
-    {       
-        if (col.tag == "Coin"){
-          Debug.Log("Pick!");
-            // Add to player score
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Player") == true)
+        {
+            GameObject thePlayer = GameObject.Find("UIManager");
+            UIManager playerScript = thePlayer.GetComponent<UIManager>();
+            playerScript.coinsCollected++;
+            Destroy(transform.gameObject);
         }
+    }
 
 }
-}
+
