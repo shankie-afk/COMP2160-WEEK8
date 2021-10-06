@@ -6,7 +6,6 @@ public class ScoreKeeper : MonoBehaviour
 {
     private int pointsPerPickup = 10;
     private int score;
-    public int Score;
 
     public void OnCoinPickup()
     {
@@ -14,8 +13,7 @@ public class ScoreKeeper : MonoBehaviour
     }
 
     public int getScore(){
-        Score = score;
-        return Score;
+        return score;
     }
 
 }
