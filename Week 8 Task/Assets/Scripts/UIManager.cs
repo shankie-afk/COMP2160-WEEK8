@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
   
     void Start()
     {
- GameObject scoreKeeper = GameObject.Find("ScoreKeeper");
+        GameObject scoreKeeper = GameObject.Find("ScoreKeeper");
         scoreKeeperScript = scoreKeeper.GetComponent<ScoreKeeper>();          
     }
 
