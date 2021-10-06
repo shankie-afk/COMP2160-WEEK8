@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int playerScore;
     ScoreKeeper scoreKeeperScript;
-
-    // Start is called before the first frame update
     void Start()
     {
        GameObject scoreKeeper = GameObject.Find("ScoreKeeper");
