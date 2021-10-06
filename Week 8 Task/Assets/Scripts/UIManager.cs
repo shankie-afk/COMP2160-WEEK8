@@ -6,21 +6,19 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int coinsCollected;
-    public int scorePerCoin;
-    private int coinScore;
+
+    ScoreKeeper scoreKeeperScript;
     public Text score;
+  
     void Start()
     {
-        coinScore = 0;
-        
+ GameObject scoreKeeper = GameObject.Find("ScoreKeeper");
+        scoreKeeperScript = scoreKeeper.GetComponent<ScoreKeeper>();          
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        coinScore = coinsCollected * scorePerCoin;
-        score.text = "Score: " + coinScore.ToString();
-
+        score.text = "Score: " + scoreKeeperScript.getScore();
     }
 }
