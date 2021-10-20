@@ -8,12 +8,6 @@ public class Player2Move : MonoBehaviour
     public const string Horizontal2 = "Horizontal2";
     public const string Vertical2 = "Vertical2";
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
