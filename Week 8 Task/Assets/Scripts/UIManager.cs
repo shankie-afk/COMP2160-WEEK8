@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         coinScorep1 = coinsCollectedp1 * scorePerCoin;
-        coinScorep2 = coinsCollectedp1 * scorePerCoin;
+        coinScorep2 = coinsCollectedp2 * scorePerCoin;
         scorep1.text = "P1 Score: " + coinScorep1.ToString();
         scorep2.text = "P2 Score: " + coinScorep2.ToString();
 
