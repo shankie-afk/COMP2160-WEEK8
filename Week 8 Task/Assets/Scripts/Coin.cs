@@ -8,22 +8,30 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player") == true)
+        if (col.gameObject.CompareTag("Player1") == true)
         {
-            GameObject thePlayer = GameObject.Find("UIManager");
-            UIManager playerScript = thePlayer.GetComponent<UIManager>();
-            playerScript.coinsCollected++;
+            GameObject player1 = GameObject.Find("UIManager");
+            UIManager playerScript = player1.GetComponent<UIManager>();
+            playerScript.coinsCollectedp1++;
+            Destroy(transform.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("Player2") == true)
+        {
+            GameObject player2 = GameObject.Find("UIManager");
+            UIManager playerScript = player2.GetComponent<UIManager>();
+            playerScript.coinsCollectedp2++;
             Destroy(transform.gameObject);
         }
     }
